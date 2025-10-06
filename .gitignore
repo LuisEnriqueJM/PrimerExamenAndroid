@@ -1,0 +1,9 @@
+# Build folders
+build/
+app/build/
+
+# IDE files
+.idea/
+
+# Gradle files
+.gradle/
