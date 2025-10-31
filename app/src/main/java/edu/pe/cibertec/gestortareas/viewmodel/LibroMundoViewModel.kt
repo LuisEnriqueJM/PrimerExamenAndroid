@@ -27,10 +27,14 @@ class LibroMundoViewModel : ViewModel() {
     var categoriaSeleccionada by mutableStateOf<Categoria?>(null)
         private set
 
-    // Lista de libros en el carrito
+
+
+    // Lista Reactiva - Lista de libros en el carrito
     val librosCarrito = mutableStateListOf<Libro>()
 
-    // Cálculos
+
+
+    // Cálculos Financieros
     var subtotal by mutableStateOf(0.0)
         private set
 
@@ -82,6 +86,11 @@ class LibroMundoViewModel : ViewModel() {
     fun actualizarCategoria(nuevaCategoria: Categoria) {
         categoriaSeleccionada = nuevaCategoria
     }
+
+
+
+
+    // Funciones de Validacion
 
     // Función para validar y agregar libro
     fun agregarLibro() {
@@ -187,6 +196,9 @@ class LibroMundoViewModel : ViewModel() {
         calculoRealizado = true
     }
 
+
+
+    // Logica de Descuentos - Función para obtener info del descuento
     private fun obtenerInfoDescuento(cantidadTotal: Int): InfoDescuento {
         return when {
             cantidadTotal in 1..2 -> InfoDescuento(
@@ -265,7 +277,10 @@ class LibroMundoViewModel : ViewModel() {
         ocultarDialogoConfirmacionEliminar()
     }
 
-    // Funciones para ocultar diálogos
+
+
+
+    // Estado de Dialogos - Funciones para ocultar diálogos
     fun ocultarDialogoValidacion() {
         mostrarDialogoValidacion = false
     }

@@ -1,10 +1,10 @@
 package edu.pe.cibertec.gestortareas.model
 
 enum class Categoria(val nombre: String) {
-    FICCION("Ficción"),
-    NO_FICCION("No Ficción"),
+    COMPUTACION("Computación"),
+    REDES("Redes"),
     CIENCIA("Ciencia"),
     TECNOLOGIA("Tecnología"),
-    HISTORIA("Historia"),
-    ARTE("Arte")
+    EDUCACION("Educacion"),
+    DEPORTE("Deporte")
 }

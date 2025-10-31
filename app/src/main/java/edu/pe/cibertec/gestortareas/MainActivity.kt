@@ -5,15 +5,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import edu.pe.cibertec.gestortareas.ui.screens.PantallaLibroMundo
+import edu.pe.cibertec.gestortareas.navigation.AppNavigation
 import edu.pe.cibertec.gestortareas.ui.theme.GestortareasmovilktTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,10 +17,11 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             GestortareasmovilktTheme {
-                Surface(modifier = Modifier.fillMaxSize(),
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
-                ){
-                    PantallaLibroMundo()
+                ) {
+                    AppNavigation()
                 }
             }
         }

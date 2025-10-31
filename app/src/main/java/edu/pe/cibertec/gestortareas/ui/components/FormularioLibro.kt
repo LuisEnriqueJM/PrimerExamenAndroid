@@ -40,7 +40,7 @@ fun FormularioLibro(
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Text(
-                text = "Agregar Libro",
+                text = "Agregar Producto",
                 style = MaterialTheme.typography.titleMedium,
                 color = MaterialTheme.colorScheme.primary
             )

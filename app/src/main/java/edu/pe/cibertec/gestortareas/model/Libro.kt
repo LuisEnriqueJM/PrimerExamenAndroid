@@ -4,9 +4,12 @@ import java.util.UUID
 
 data class Libro(
     val id: String = UUID.randomUUID().toString(),
-    val titulo: String,
-    val precioUnitario: Double,
-    val cantidad: Int,
-    val categoria: String,
-    val subtotal: Double = precioUnitario * cantidad
-)
+    val titulo: String = "",
+    val precioUnitario: Double = 0.0,
+    val cantidad: Int = 0,
+    val categoria: String = ""
+) {
+    // Propiedad calculada que no se serializa a Firestore
+    val subtotal: Double
+        get() = precioUnitario * cantidad
+}

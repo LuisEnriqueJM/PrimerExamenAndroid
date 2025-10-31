@@ -27,7 +27,7 @@ fun PantallaLibroMundo(
             TopAppBar(
                 title = {
                     Text(
-                        "LibroMundo - Carrito de Compras",
+                        "Tecno Data - Carrito de Compras",
                         style = MaterialTheme.typography.headlineSmall
                     )
                 },
@@ -84,7 +84,7 @@ fun PantallaLibroMundo(
                         modifier = Modifier.padding(16.dp)
                     ) {
                         Text(
-                            text = "Listado de libros en el Carrito (${libros.size}):",
+                            text = "Listado de Productos en el Carrito (${libros.size}):",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.primary
@@ -107,7 +107,7 @@ fun PantallaLibroMundo(
                                 contentAlignment = Alignment.Center
                             ) {
                                 Text(
-                                    text = "No hay libros en el carrito",
+                                    text = "No hay Productos en el carrito",
                                     style = MaterialTheme.typography.bodyLarge,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
@@ -123,7 +123,7 @@ fun PantallaLibroMundo(
                     }
                 }
 
-                // Sección de totales
+                // Card - Sección de totales
                 Card(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -196,6 +196,7 @@ fun PantallaLibroMundo(
 
                         Spacer(modifier = Modifier.height(4.dp))
 
+                        // Botones Limpiar y Calcular
                         Row(
                             modifier = Modifier.fillMaxWidth(),
                             horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -225,7 +226,7 @@ fun PantallaLibroMundo(
                 }
             }
 
-            // Snackbar en la parte inferior
+            // BarraNotificacion - Snackbar en la parte inferior
             Box(
                 modifier = Modifier
                     .fillMaxSize()
@@ -239,7 +240,7 @@ fun PantallaLibroMundo(
             }
         }
 
-        // Diálogos
+        // Diálogos Modales
         if (viewModel.mostrarDialogoValidacion) {
             DialogoValidacion(
                 mensaje = viewModel.mensajeValidacion,
